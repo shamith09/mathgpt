@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="chat">
+        {% for message in messages %}
+        <p><strong>{{ message.role }}:</strong> {{ message.content }}</p>
+        {% endfor %}
+        <p><strong>ChatGPT:</strong> {{ reply }}</p>
+    </div>
+    <form method="POST">
+        <input type="text" name="message" placeholder="Type your message here">
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
